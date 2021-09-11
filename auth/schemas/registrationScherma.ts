@@ -1,4 +1,4 @@
-const registrationSchema = {
+const userRegistrationSchema = {
     schema: {
         description: 'User registration API',
         tags: ['auth'],
@@ -30,4 +30,4 @@ const registrationSchema = {
         ]
     }
 }
-export { registrationSchema }
+export { userRegistrationSchema }
