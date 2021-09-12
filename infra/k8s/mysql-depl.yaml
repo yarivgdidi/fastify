@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: password
+            - name: MYSQL_USER
+              value: comunix
+            - name: MYSQL_PASSWORD
+              value: comunix
+            - name: MYSQL_DATABASE
+              value: comunix
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: comunix-mysql-srv
+spec:
+  selector:
+    app: mysql
+  ports:
+    - name: db
+      protocol: TCP
+      port: 3306
+      targetPort: 3306
