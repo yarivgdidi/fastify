@@ -1,4 +1,7 @@
-const userRegistrationSchema = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.userRegistrationSchema = void 0;
+var userRegistrationSchema = {
     schema: {
         description: 'User registration API',
         tags: ['auth'],
@@ -13,12 +16,12 @@ const userRegistrationSchema = {
             },
         },
         response: {
-            201:  {
+            201: {
                 description: 'Successful registration',
                 type: 'object',
                 properties: {
                     email: { type: 'string' },
-                    id: { type: 'number' },
+                    id: { type: 'string' },
                     token: { type: 'string' }
                 }
             }
@@ -29,5 +32,6 @@ const userRegistrationSchema = {
             }
         ]
     }
-}
-export { userRegistrationSchema }
+};
+exports.userRegistrationSchema = userRegistrationSchema;
+//# sourceMappingURL=registrationScherma.js.map

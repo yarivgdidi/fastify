@@ -9,7 +9,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: yarivgadidi/comunix-auth
+    - image: yarivgadidi/fastify-auth
       context: auth
       docker:
         dockerfile: Dockerfile

@@ -1,6 +1,6 @@
 interface ILoginResponse {
     email: string;
-    id: string;
+    id: number;
     token: string;
 }
 export { ILoginResponse }

@@ -17,7 +17,7 @@ const loginSchema = {
                 type: 'object',
                 properties: {
                     email: {type: 'string'},
-                    id: {type: 'string'},
+                    id: {type: 'number'},
                     token: {type: 'string'}
                 }
             }

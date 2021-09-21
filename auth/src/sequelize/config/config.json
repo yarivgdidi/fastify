@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "fastify",
+    "password": "fastify",
+    "database": "fastify",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "fastify",
+    "password": "fastify",
+    "database": "fastify_test",
+    "host": "fastify-mysql-srv",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "fastify",
+    "password": "fastify",
+    "database": "fastify",
+    "host": "fastify-mysql-srv",
+    "dialect": "mysql"
+  }
+}

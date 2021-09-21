@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "ts-node-dev src/index.ts"
+    "start": "ts-node-dev src/index.ts",
+    "db:migrate": "npx sequelize-cli db:create && npx sequelize-cli db:migrate"
   },
   "keywords": [],
   "author": "",

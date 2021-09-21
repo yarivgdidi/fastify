@@ -7,6 +7,8 @@ spec:
   selector:
     matchLabels:
       app: mysql
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
@@ -19,16 +21,16 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               value: password
             - name: MYSQL_USER
-              value: comunix
+              value: fastify
             - name: MYSQL_PASSWORD
-              value: comunix
+              value: fastify
             - name: MYSQL_DATABASE
-              value: comunix
+              value: fastify
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: comunix-mysql-srv
+  name: fastify-mysql-srv
 spec:
   selector:
     app: mysql

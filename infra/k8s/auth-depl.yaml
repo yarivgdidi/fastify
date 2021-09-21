@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: auth
-          image: yarivgadidi/comunix-auth
+          image: yarivgadidi/fastify-auth
           env:
             - name: JWT_KEY
               value: jwt-secret-dont-tell
             - name: MYSQL_URI
-              value: mysql://comunix-mysql-srv:3307
+              value: fastify-mysql-srv:3306
 ---
 apiVersion: v1
 kind: Service
